@@ -10,14 +10,14 @@ public class EmitParticlesOnTile : MonoBehaviour
 
     void Start()
     {
-        ptcl.Stop();
+        ptcl.Stop(false);
     }
     
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == tileTag)
         {
-            ptcl.Play();
+            ptcl.Play(false);
         }
     }
 
@@ -25,7 +25,7 @@ public class EmitParticlesOnTile : MonoBehaviour
     {
         if (col.tag == tileTag)
         {
-            ptcl.Stop();
+            ptcl.Stop(false);
         }
     }
 }
